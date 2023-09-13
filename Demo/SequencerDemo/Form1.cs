@@ -129,7 +129,9 @@ namespace SequencerDemo
 
         private void outputDeviceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            outDevice.Dispose();
+            outDeviceID = 0;
+            OnLoad(null);
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -292,6 +294,13 @@ namespace SequencerDemo
             {
                 positionHScrollBar.Value = Math.Min(sequencer1.Position, positionHScrollBar.Maximum);
             }
-        }        
+        }
+
+        private void outputDevice2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            outDevice.Dispose();
+            outDeviceID = 1;
+            OnLoad(null);
+        }
     }
 }
