@@ -302,5 +302,12 @@ namespace SequencerDemo
             outDeviceID = 1;
             OnLoad(null);
         }
+
+        private void outputDevice3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            outDevice.Dispose();
+            outDeviceID = 2;
+            OnLoad(null);
+        }
     }
 }

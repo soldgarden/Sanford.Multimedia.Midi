@@ -23,39 +23,7 @@ namespace MidiWatcher
         public Form1()
         {
             InitializeComponent();
-        }
-
-        protected override void OnLoad(EventArgs e)
-        {
-            if(InputDevice.DeviceCount == 0)
-            {
-                MessageBox.Show("No MIDI input devices available.", "Error!",
-                    MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                Close();
-            }
-            else
-            {
-                try
-                {
-                    context = SynchronizationContext.Current;
-
-                    inDevice = new InputDevice(0);
-                    inDevice.ChannelMessageReceived += HandleChannelMessageReceived;
-                    inDevice.SysCommonMessageReceived += HandleSysCommonMessageReceived;
-                    inDevice.SysExMessageReceived += HandleSysExMessageReceived;
-                    inDevice.SysRealtimeMessageReceived += HandleSysRealtimeMessageReceived;
-                    inDevice.Error += new EventHandler<ErrorEventArgs>(inDevice_Error);                    
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Error!",
-                        MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                    Close();
-                }
-            }
-
-            base.OnLoad(e);
-        }            
+        }           
 
         protected override void OnClosed(EventArgs e)
         {
@@ -182,6 +150,36 @@ namespace MidiWatcher
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             inDevice.PostEventsOnCreationContext = checkBox2.Checked;
+        }
+
+        private void loadButton1_Click(object sender, EventArgs e)
+        {
+            if (InputDevice.DeviceCount == 0)
+            {
+                MessageBox.Show("No MIDI input devices available.", "Error!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                Close();
+            }
+            else
+            {
+                try
+                {
+                    context = SynchronizationContext.Current;
+
+                    inDevice = new InputDevice((int)Port.Value);
+                    inDevice.ChannelMessageReceived += HandleChannelMessageReceived;
+                    inDevice.SysCommonMessageReceived += HandleSysCommonMessageReceived;
+                    inDevice.SysExMessageReceived += HandleSysExMessageReceived;
+                    inDevice.SysRealtimeMessageReceived += HandleSysRealtimeMessageReceived;
+                    inDevice.Error += new EventHandler<ErrorEventArgs>(inDevice_Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    Close();
+                }
+            }
         }
     }
 }

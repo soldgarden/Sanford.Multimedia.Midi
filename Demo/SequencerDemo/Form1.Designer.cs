@@ -52,16 +52,17 @@ namespace SequencerDemo
             this.pianoControl1 = new Sanford.Multimedia.Midi.UI.PianoControl();
             this.sequence1 = new Sanford.Multimedia.Midi.Sequence();
             this.sequencer1 = new Sanford.Multimedia.Midi.Sequencer();
+            this.outputDevice3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // stopButton
             // 
-            this.stopButton.Location = new System.Drawing.Point(272, 124);
-            this.stopButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.stopButton.Location = new System.Drawing.Point(242, 99);
+            this.stopButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.stopButton.Name = "stopButton";
-            this.stopButton.Size = new System.Drawing.Size(112, 35);
+            this.stopButton.Size = new System.Drawing.Size(100, 28);
             this.stopButton.TabIndex = 0;
             this.stopButton.Text = "Stop";
             this.stopButton.UseVisualStyleBackColor = true;
@@ -69,10 +70,10 @@ namespace SequencerDemo
             // 
             // startButton
             // 
-            this.startButton.Location = new System.Drawing.Point(421, 124);
-            this.startButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.startButton.Location = new System.Drawing.Point(374, 99);
+            this.startButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(112, 35);
+            this.startButton.Size = new System.Drawing.Size(100, 28);
             this.startButton.TabIndex = 1;
             this.startButton.Text = "Start";
             this.startButton.UseVisualStyleBackColor = true;
@@ -80,10 +81,10 @@ namespace SequencerDemo
             // 
             // continueButton
             // 
-            this.continueButton.Location = new System.Drawing.Point(572, 124);
-            this.continueButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.continueButton.Location = new System.Drawing.Point(508, 99);
+            this.continueButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.continueButton.Name = "continueButton";
-            this.continueButton.Size = new System.Drawing.Size(112, 35);
+            this.continueButton.Size = new System.Drawing.Size(100, 28);
             this.continueButton.TabIndex = 2;
             this.continueButton.Text = "Continue";
             this.continueButton.UseVisualStyleBackColor = true;
@@ -91,15 +92,14 @@ namespace SequencerDemo
             // 
             // positionHScrollBar
             // 
-            this.positionHScrollBar.Location = new System.Drawing.Point(18, 71);
+            this.positionHScrollBar.Location = new System.Drawing.Point(16, 57);
             this.positionHScrollBar.Name = "positionHScrollBar";
-            this.positionHScrollBar.Size = new System.Drawing.Size(1010, 26);
+            this.positionHScrollBar.Size = new System.Drawing.Size(898, 26);
             this.positionHScrollBar.TabIndex = 3;
             this.positionHScrollBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.positionHScrollBar_Scroll);
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -107,8 +107,8 @@ namespace SequencerDemo
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1898, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1687, 28);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -119,25 +119,25 @@ namespace SequencerDemo
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(170, 34);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
             this.openToolStripMenuItem.Text = "&Open...";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(167, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(134, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(170, 34);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -145,22 +145,23 @@ namespace SequencerDemo
             // 
             this.mIDIToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.outputDeviceToolStripMenuItem,
-            this.outputDevice2ToolStripMenuItem});
+            this.outputDevice2ToolStripMenuItem,
+            this.outputDevice3ToolStripMenuItem});
             this.mIDIToolStripMenuItem.Name = "mIDIToolStripMenuItem";
-            this.mIDIToolStripMenuItem.Size = new System.Drawing.Size(67, 29);
+            this.mIDIToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.mIDIToolStripMenuItem.Text = "&MIDI";
             // 
             // outputDeviceToolStripMenuItem
             // 
             this.outputDeviceToolStripMenuItem.Name = "outputDeviceToolStripMenuItem";
-            this.outputDeviceToolStripMenuItem.Size = new System.Drawing.Size(243, 34);
+            this.outputDeviceToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.outputDeviceToolStripMenuItem.Text = "Output Device 1";
             this.outputDeviceToolStripMenuItem.Click += new System.EventHandler(this.outputDeviceToolStripMenuItem_Click);
             // 
             // outputDevice2ToolStripMenuItem
             // 
             this.outputDevice2ToolStripMenuItem.Name = "outputDevice2ToolStripMenuItem";
-            this.outputDevice2ToolStripMenuItem.Size = new System.Drawing.Size(243, 34);
+            this.outputDevice2ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.outputDevice2ToolStripMenuItem.Text = "Output Device 2";
             this.outputDevice2ToolStripMenuItem.Click += new System.EventHandler(this.outputDevice2ToolStripMenuItem_Click);
             // 
@@ -169,13 +170,13 @@ namespace SequencerDemo
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(176, 34);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
             this.aboutToolStripMenuItem.Text = "&About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -190,17 +191,17 @@ namespace SequencerDemo
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripProgressBar1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 2461);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 819);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 21, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1898, 29);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1687, 25);
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripProgressBar1
             // 
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(150, 21);
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(133, 17);
             // 
             // timer1
             // 
@@ -211,13 +212,13 @@ namespace SequencerDemo
             // 
             this.pianoControl1.BackColor = System.Drawing.SystemColors.Control;
             this.pianoControl1.HighNoteID = 109;
-            this.pianoControl1.Location = new System.Drawing.Point(18, 268);
+            this.pianoControl1.Location = new System.Drawing.Point(16, 214);
             this.pianoControl1.LowNoteID = 21;
-            this.pianoControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pianoControl1.MinimumSize = new System.Drawing.Size(1200, 600);
+            this.pianoControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.pianoControl1.MinimumSize = new System.Drawing.Size(1067, 480);
             this.pianoControl1.Name = "pianoControl1";
             this.pianoControl1.NoteOnColor = System.Drawing.Color.SkyBlue;
-            this.pianoControl1.Size = new System.Drawing.Size(1880, 600);
+            this.pianoControl1.Size = new System.Drawing.Size(1671, 480);
             this.pianoControl1.TabIndex = 5;
             this.pianoControl1.Text = "pianoControl1";
             this.pianoControl1.PianoKeyDown += new System.EventHandler<Sanford.Multimedia.Midi.UI.PianoKeyEventArgs>(this.pianoControl1_PianoKeyDown);
@@ -237,11 +238,18 @@ namespace SequencerDemo
             this.sequencer1.Chased += new System.EventHandler<Sanford.Multimedia.Midi.ChasedEventArgs>(this.HandleChased);
             this.sequencer1.Stopped += new System.EventHandler<Sanford.Multimedia.Midi.StoppedEventArgs>(this.HandleStopped);
             // 
+            // outputDevice3ToolStripMenuItem
+            // 
+            this.outputDevice3ToolStripMenuItem.Name = "outputDevice3ToolStripMenuItem";
+            this.outputDevice3ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.outputDevice3ToolStripMenuItem.Text = "Output Device 3";
+            this.outputDevice3ToolStripMenuItem.Click += new System.EventHandler(this.outputDevice3ToolStripMenuItem_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1898, 2490);
+            this.ClientSize = new System.Drawing.Size(1687, 844);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.pianoControl1);
             this.Controls.Add(this.positionHScrollBar);
@@ -251,7 +259,7 @@ namespace SequencerDemo
             this.Controls.Add(this.menuStrip1);
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Sequencer Demo";
             this.menuStrip1.ResumeLayout(false);
@@ -286,6 +294,7 @@ namespace SequencerDemo
         private Sequencer sequencer1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem outputDevice2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem outputDevice3ToolStripMenuItem;
     }
 }
 
